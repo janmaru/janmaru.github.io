@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - Janmaru</title>
+    <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
+    {% if page.extra_css %}
+    <style>{{ page.extra_css }}</style>
+    {% endif %}
+</head>
+<body>
+    <header>
+        <h1><a href="{{ '/' | relative_url }}" style="text-decoration:none; color:inherit;">JANMARU</a></h1>
+        <nav>
+            <a href="{{ '/' | relative_url }}">Home</a>
+            <a href="{{ '/categorie/llm' | relative_url }}">LLM</a>
+            <a href="{{ '/about' | relative_url }}">About</a>
+        </nav>
+    </header>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+        &copy; {{ site.time | date: '%Y' }} Mauro Ghiani. Empty space is where thought is born.
+    </footer>
+</body>
+</html>

@@ -1,0 +1,20 @@
+title: Janmaru
+description: Thoughts & Architectures
+author: Mauro Ghiani
+url: https://janmaru.github.io
+
+permalink: /articoli/:slug/
+
+collections_dir: .
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: default

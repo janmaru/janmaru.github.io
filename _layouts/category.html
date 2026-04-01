@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<h1>Topics: {{ page.category_name }}</h1>
+<p class="meta">{{ page.category_description }}</p>
+
+{% assign sorted_posts = site.posts | where: "category", page.category_name | sort: 'date' | reverse %}
+{% for post in sorted_posts %}
+<div class="post-card">
+    <div class="meta">{{ post.date | date: "%B %-d, %Y" }}</div>
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+</div>
+{% endfor %}

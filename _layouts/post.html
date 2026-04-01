@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<article>
+    <div class="meta">{{ page.date | date: "%B %-d, %Y" }} • {{ page.author | default: site.author }} • {{ page.category }}</div>
+    <h1>{{ page.title }}</h1>
+
+    <div class="content">
+        {{ content }}
+    </div>
+
+    {% if page.tags.size > 0 %}
+    <div class="tags">
+        {% for tag in page.tags %}
+        <span class="tag">#{{ tag }}</span>
+        {% endfor %}
+    </div>
+    {% endif %}
+</article>
