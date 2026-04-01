@@ -1,11 +1,24 @@
 ---
 layout: default
 ---
-{% assign sorted_posts = site.posts | sort: 'date' | reverse %}
-{% for post in sorted_posts %}
+{% for post in paginator.posts %}
 <div class="post-card">
     <div class="meta">{{ post.date | date: "%B %-d, %Y" }} • {{ post.category }}</div>
     <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
     <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
 </div>
 {% endfor %}
+
+{% if paginator.total_pages > 1 %}
+<nav class="pagination">
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}">&larr; Newer</a>
+    {% endif %}
+
+    <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}">Older &rarr;</a>
+    {% endif %}
+</nav>
+{% endif %}

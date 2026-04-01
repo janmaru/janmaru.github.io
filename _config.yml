@@ -3,6 +3,12 @@ description: Thoughts & Architectures
 author: Mauro Ghiani
 url: https://janmaru.github.io
 
-permalink: /articoli/:slug/
+permalink: /articles/:slug/
 future: true
 theme: null
+
+plugins:
+  - jekyll-paginate
+
+paginate: 5
+paginate_path: "/page/:num/"

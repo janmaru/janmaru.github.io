@@ -2,54 +2,6 @@
 title: About
 layout: default
 permalink: /about/
-extra_css: |
-    .profile-container {
-        display: flex;
-        align-items: center;
-        gap: 2rem;
-        margin-bottom: 3rem;
-    }
-    .profile-pic {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        border: 2px solid var(--border-line);
-        padding: 5px;
-        background: white;
-    }
-    .bio-lead {
-        font-family: "Georgia", serif;
-        font-size: 1.4rem;
-        color: var(--cinnabar);
-        margin-bottom: 0.5rem;
-    }
-    @media (max-width: 600px) {
-        .profile-container {
-            flex-direction: column;
-            text-align: center;
-        }
-    }
-    .repo-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1.5rem;
-        margin-top: 2rem;
-    }
-    .repo-card {
-        padding: 1.5rem;
-        border: 1px solid var(--border-line);
-        background: rgba(255,255,255,0.5);
-    }
-    .repo-card h4 {
-        margin: 0 0 0.5rem 0;
-        font-family: "Georgia", serif;
-        color: var(--ink-black);
-    }
-    .repo-card p {
-        font-size: 0.9rem;
-        margin: 0;
-        color: var(--smoke-gray);
-    }
 ---
 
 <div class="profile-container">
