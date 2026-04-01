@@ -13,10 +13,10 @@
     <header>
         <h1><a href="{{ '/' | relative_url }}" style="text-decoration:none; color:inherit;">JANMARU</a></h1>
         <nav>
-            <a href="{{ '/' | relative_url }}">Home</a>
-            <a href="{{ '/categories/llm' | relative_url }}">LLM</a>
-            <a href="{{ '/about' | relative_url }}">About</a>
-            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark theme">&#9790;</button>
+            <a href="{{ '/' | relative_url }}"><span class="hotkey">H</span>ome</a>
+            <a href="{{ '/categories/llm' | relative_url }}"><span class="hotkey">L</span>LM</a>
+            <a href="{{ '/about' | relative_url }}"><span class="hotkey">A</span>bout</a>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark theme"><span class="hotkey">D</span>ark</button>
         </nav>
     </header>
 
@@ -32,14 +32,19 @@
         var btn = document.getElementById('theme-toggle');
         var body = document.body;
         var stored = localStorage.getItem('theme');
+        function setLabel(isLight) {
+            btn.innerHTML = isLight
+                ? '<span class="hotkey">L</span>ight'
+                : '<span class="hotkey">D</span>ark';
+        }
         if (stored === 'light') {
             body.classList.add('light-theme');
-            btn.innerHTML = '&#9728;';
+            setLabel(true);
         }
         btn.addEventListener('click', function() {
             body.classList.toggle('light-theme');
             var isLight = body.classList.contains('light-theme');
-            btn.innerHTML = isLight ? '&#9728;' : '&#9790;';
+            setLabel(isLight);
             localStorage.setItem('theme', isLight ? 'light' : 'dark');
         });
     })();
