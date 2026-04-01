@@ -5,17 +5,4 @@ url: https://janmaru.github.io
 
 permalink: /articoli/:slug/
 future: true
-
-collections_dir: .
-
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: post
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: default
+theme: null
