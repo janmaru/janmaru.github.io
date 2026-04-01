@@ -7,8 +7,6 @@ tags: [Solitude, Bukowski, Aloneness, Relationships]
 excerpt: "You are rich when you are alone, you are poor when you feel lonely. Only those who don't need someone can truly see someone."
 ---
 
-![Arcimboldo](/assets/images/arcimboldo.jpg)
-
 You are rich when you are **alone**, you are poor when you feel **lonely**.
 
 > *the city dumps fill*
