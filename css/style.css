@@ -12,6 +12,19 @@
     --mono: "Cascadia Code", "Fira Code", "JetBrains Mono", "Consolas", "SF Mono", monospace;
 }
 
+body.light-theme {
+    --bg-dark: #f5f3eb;
+    --bg-panel: #eae7dc;
+    --text-main: #2c2c2c;
+    --text-bright: #1a1a1a;
+    --cyan: #0e7c6b;
+    --green: #2a7a3a;
+    --yellow: #8a6d00;
+    --blue: #2b6cb0;
+    --border: #ccc5b0;
+    --dim: #6b6b6b;
+}
+
 body {
     background-color: var(--bg-dark);
     color: var(--text-main);
@@ -65,6 +78,24 @@ header nav a:hover {
     background: var(--border);
     border-color: var(--dim);
     color: var(--yellow);
+}
+
+/* ── Theme Toggle ── */
+
+.theme-toggle {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--dim);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.2rem 0.5rem;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.theme-toggle:hover {
+    color: var(--yellow);
+    border-color: var(--dim);
 }
 
 /* ── Main Content ── */

@@ -16,6 +16,7 @@
             <a href="{{ '/' | relative_url }}">Home</a>
             <a href="{{ '/categories/llm' | relative_url }}">LLM</a>
             <a href="{{ '/about' | relative_url }}">About</a>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark theme">&#9790;</button>
         </nav>
     </header>
 
@@ -26,5 +27,22 @@
     <footer>
         &copy; {{ site.time | date: '%Y' }} Mauro Ghiani. Empty space is where thought is born.
     </footer>
+    <script>
+    (function() {
+        var btn = document.getElementById('theme-toggle');
+        var body = document.body;
+        var stored = localStorage.getItem('theme');
+        if (stored === 'light') {
+            body.classList.add('light-theme');
+            btn.innerHTML = '&#9728;';
+        }
+        btn.addEventListener('click', function() {
+            body.classList.toggle('light-theme');
+            var isLight = body.classList.contains('light-theme');
+            btn.innerHTML = isLight ? '&#9728;' : '&#9790;';
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        });
+    })();
+    </script>
 </body>
 </html>
