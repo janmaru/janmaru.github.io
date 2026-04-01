@@ -2,7 +2,7 @@
 title: "How Is Algebra Related to AI's Context Windows, High-Dimensional Geometry Redundancy, and Old Myths?"
 date: 2026-03-27
 author: Mauro Ghiani
-category: LLM
+category: AI
 tags: [GenerativeAI, Transformers, LinearAlgebra, TurboQuant]
 excerpt: "From the Enuma Elish myth to the Johnson-Lindenstrauss Lemma: how Google's TurboQuant compresses KV cache by 6x with zero accuracy loss."
 ---

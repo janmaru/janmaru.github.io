@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" font-family="'Cascadia Code','Fira Code','JetBrains Mono','Consolas',monospace">
+  <!-- Background -->
+  <rect width="720" height="400" rx="6" fill="#1e1e2e"/>
+
+  <!-- Title -->
+  <text x="360" y="38" text-anchor="middle" fill="#f3f99d" font-size="16" font-weight="bold">THE LLM 'TOKEN TAX' IS REAL.</text>
+  <text x="360" y="60" text-anchor="middle" fill="#f3f99d" font-size="16" font-weight="bold">STOP BURNING CONTEXT</text>
+
+  <!-- Chart area -->
+  <!-- Y axis line -->
+  <line x1="130" y1="80" x2="130" y2="340" stroke="#3a3a5c" stroke-width="1.5"/>
+  <!-- X axis line -->
+  <line x1="130" y1="340" x2="680" y2="340" stroke="#3a3a5c" stroke-width="1.5"/>
+
+  <!-- X axis ticks and labels -->
+  <line x1="130" y1="340" x2="130" y2="345" stroke="#888899" stroke-width="1"/>
+  <text x="130" y="362" text-anchor="middle" fill="#888899" font-size="11">0</text>
+
+  <line x1="228" y1="340" x2="228" y2="345" stroke="#888899" stroke-width="1"/>
+  <text x="228" y="362" text-anchor="middle" fill="#888899" font-size="11">5</text>
+
+  <line x1="326" y1="340" x2="326" y2="345" stroke="#888899" stroke-width="1"/>
+  <text x="326" y="362" text-anchor="middle" fill="#888899" font-size="11">10</text>
+
+  <line x1="424" y1="340" x2="424" y2="345" stroke="#888899" stroke-width="1"/>
+  <text x="424" y="362" text-anchor="middle" fill="#888899" font-size="11">15</text>
+
+  <line x1="522" y1="340" x2="522" y2="345" stroke="#888899" stroke-width="1"/>
+  <text x="522" y="362" text-anchor="middle" fill="#888899" font-size="11">20</text>
+
+  <line x1="620" y1="340" x2="620" y2="345" stroke="#888899" stroke-width="1"/>
+  <text x="620" y="362" text-anchor="middle" fill="#888899" font-size="11">25</text>
+
+  <!-- X axis label -->
+  <text x="405" y="388" text-anchor="middle" fill="#888899" font-size="12">Token Count</text>
+
+  <!-- Grid lines (subtle) -->
+  <line x1="228" y1="80" x2="228" y2="340" stroke="#3a3a5c" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <line x1="326" y1="80" x2="326" y2="340" stroke="#3a3a5c" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <line x1="424" y1="80" x2="424" y2="340" stroke="#3a3a5c" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <line x1="522" y1="80" x2="522" y2="340" stroke="#3a3a5c" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <line x1="620" y1="80" x2="620" y2="340" stroke="#3a3a5c" stroke-width="0.5" stroke-dasharray="4,4"/>
+
+  <!-- Bars (bottom to top: CSV, TXT, Markdown, JSON, XML) -->
+  <!-- CSV: 10 tokens → width = 10 * 19.6 = 196 -->
+  <rect x="130" y="290" width="196" height="40" rx="2" fill="#5af78e"/>
+  <text x="120" y="315" text-anchor="end" fill="#5af78e" font-size="13" font-weight="bold">CSV</text>
+
+  <!-- TXT: 15 tokens → width = 294 -->
+  <rect x="130" y="238" width="294" height="40" rx="2" fill="#57a5e5"/>
+  <text x="120" y="263" text-anchor="end" fill="#57a5e5" font-size="13" font-weight="bold">TXT</text>
+
+  <!-- Markdown: 16 tokens → width = 314 -->
+  <rect x="130" y="186" width="314" height="40" rx="2" fill="#b48ead"/>
+  <text x="120" y="211" text-anchor="end" fill="#b48ead" font-size="13" font-weight="bold">MD</text>
+
+  <!-- JSON: 20 tokens → width = 392 -->
+  <rect x="130" y="134" width="392" height="40" rx="2" fill="#f3f99d" opacity="0.85"/>
+  <text x="120" y="159" text-anchor="end" fill="#f3f99d" font-size="13" font-weight="bold">JSON</text>
+
+  <!-- XML: 28 tokens → width = 549 -->
+  <rect x="130" y="82" width="549" height="40" rx="2" fill="#e06c75"/>
+  <text x="120" y="107" text-anchor="end" fill="#e06c75" font-size="13" font-weight="bold">XML</text>
+</svg>

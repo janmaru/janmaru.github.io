@@ -2,7 +2,7 @@
 title: "Beyond Conventions: Why LLM Context Management Requires Explicit Configuration"
 date: 2026-04-01
 author: Mauro Ghiani
-category: LLM
+category: AI
 tags: [LLMOps, Architecture, CleanCode]
 excerpt: "Context is not just data; it's a finite resource of probability. Here's why we should favor configuration over conventions."
 ---

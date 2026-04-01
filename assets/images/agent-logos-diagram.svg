@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" font-family="'Cascadia Code','Fira Code','JetBrains Mono','Consolas',monospace">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#56d4c0"/>
+    </marker>
+    <marker id="arrow-up" markerWidth="7" markerHeight="10" refX="3.5" refY="0" orient="auto">
+      <polygon points="0 10, 3.5 0, 7 10" fill="#57a5e5"/>
+    </marker>
+    <marker id="arrow-down" markerWidth="7" markerHeight="10" refX="3.5" refY="10" orient="auto">
+      <polygon points="0 0, 3.5 10, 7 0" fill="#57a5e5"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="720" height="320" rx="6" fill="#1e1e2e"/>
+
+  <!-- Prompt Box -->
+  <rect x="40" y="100" width="140" height="60" rx="3" fill="#252535" stroke="#57a5e5" stroke-width="1.5"/>
+  <text x="110" y="136" text-anchor="middle" fill="#57a5e5" font-size="14" font-weight="bold">Prompt</text>
+
+  <!-- Arrow: Prompt → AI Agent -->
+  <line x1="180" y1="130" x2="260" y2="130" stroke="#56d4c0" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- AI Agent Box -->
+  <rect x="270" y="80" width="180" height="100" rx="3" fill="#252535" stroke="#5af78e" stroke-width="1.5"/>
+  <text x="360" y="138" text-anchor="middle" fill="#5af78e" font-size="16" font-weight="bold">AI Agent</text>
+
+  <!-- Arrow: AI Agent → Output -->
+  <line x1="450" y1="130" x2="530" y2="130" stroke="#56d4c0" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Output Box -->
+  <rect x="540" y="100" width="140" height="60" rx="3" fill="#252535" stroke="#f3f99d" stroke-width="1.5"/>
+  <text x="610" y="136" text-anchor="middle" fill="#f3f99d" font-size="14" font-weight="bold">Output</text>
+
+  <!-- Arrows: AI Agent ↔ Data/Tools -->
+  <line x1="340" y1="180" x2="340" y2="230" stroke="#57a5e5" stroke-width="1.5" marker-end="url(#arrow-down)"/>
+  <line x1="380" y1="240" x2="380" y2="190" stroke="#57a5e5" stroke-width="1.5" marker-end="url(#arrow-up)"/>
+
+  <!-- Data / Tools Box -->
+  <rect x="270" y="240" width="180" height="60" rx="3" fill="#252535" stroke="#56d4c0" stroke-width="1.5"/>
+  <text x="360" y="276" text-anchor="middle" fill="#56d4c0" font-size="14" font-weight="bold">Data / Tools</text>
+
+  <!-- Subtle labels inside Data/Tools -->
+  <text x="310" y="294" text-anchor="middle" fill="#888899" font-size="10">Files</text>
+  <text x="360" y="294" text-anchor="middle" fill="#888899" font-size="10">API</text>
+  <text x="410" y="294" text-anchor="middle" fill="#888899" font-size="10">Web</text>
+</svg>
