@@ -25,6 +25,10 @@ body.light-theme {
     --dim: #6b6b6b;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     background-color: var(--bg-dark);
     color: var(--text-main);
@@ -358,23 +362,36 @@ footer {
 
     header nav {
         flex-wrap: wrap;
+        padding: 0.2rem 0;
     }
 
     main {
-        padding: 2rem 1.2rem;
+        padding: 1.5rem 1rem;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-wrap: break-word;
+        word-break: break-word;
     }
 
     footer {
-        padding: 2rem 1.2rem;
+        padding: 2rem 1rem;
     }
 
     article h1 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+    }
+
+    .content {
+        font-size: 1rem;
     }
 
     .post-card {
-        padding: 1.2rem;
-        margin-bottom: 1.2rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .post-card h2 {
+        font-size: 1rem;
     }
 
     .profile-container {
