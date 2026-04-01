@@ -48,6 +48,7 @@ header {
     border-bottom: 2px solid var(--border);
     display: flex;
     align-items: stretch;
+    justify-content: space-between;
 }
 
 header h1 {
@@ -55,12 +56,20 @@ header h1 {
     font-size: 0.85rem;
     font-weight: bold;
     margin: 0;
-    color: var(--bg-dark);
-    background: var(--cyan);
+    color: var(--green);
     letter-spacing: 2px;
     padding: 0.4rem 1rem;
     display: flex;
     align-items: center;
+}
+
+header h1 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header h1 a:hover {
+    color: var(--cyan);
 }
 
 header nav {
@@ -339,11 +348,33 @@ footer {
 
 @media (max-width: 600px) {
     header {
-        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    header h1 {
+        padding: 0.6rem 1rem;
+        border-bottom: 1px solid var(--border);
     }
 
     header nav {
         flex-wrap: wrap;
+    }
+
+    main {
+        padding: 2rem 1.2rem;
+    }
+
+    footer {
+        padding: 2rem 1.2rem;
+    }
+
+    article h1 {
+        font-size: 1.3rem;
+    }
+
+    .post-card {
+        padding: 1.2rem;
+        margin-bottom: 1.2rem;
     }
 
     .profile-container {
