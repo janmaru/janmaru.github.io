@@ -28,20 +28,20 @@ Through the lens of **Category Theory** and **Meta-rationality**, I explore new 
 
 <div class="repo-grid">
     <div class="repo-card">
-        <h4>mahamudra-core</h4>
+        <h4><a href="https://github.com/janmaru/mahamudra-core">mahamudra-core</a></h4>
         <p>Core & Guard Extensions for robust .NET development.</p>
     </div>
     <div class="repo-card">
-        <h4>mahamudra-tapper</h4>
+        <h4><a href="https://github.com/janmaru/mahamudra-tapper">mahamudra-tapper</a></h4>
         <p>An opinionated wrapper for Dapper (.NET).</p>
     </div>
     <div class="repo-card">
-        <h4>mahamudra-project-euler</h4>
-        <p>Pure mathematical solutions written in F#.</p>
+        <h4><a href="https://github.com/janmaru/mahamudra-excel">mahamudra-excel</a></h4>
+        <p>Excel utilities for .NET.</p>
     </div>
     <div class="repo-card">
-        <h4>oneKeyPad</h4>
-        <p>One-time pad (OTP) library in C#.</p>
+        <h4><a href="https://github.com/janmaru/mahamudra-contemporary">mahamudra-contemporary</a></h4>
+        <p>Contemporary patterns and abstractions for .NET.</p>
     </div>
 </div>
 

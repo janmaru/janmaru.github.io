@@ -67,13 +67,34 @@ header h1 {
     align-items: center;
 }
 
-header h1 a {
-    color: inherit;
+.site-title {
     text-decoration: none;
+    position: relative;
 }
 
-header h1 a:hover {
+.title-jan {
+    color: var(--green);
+}
+
+.title-maru {
     color: var(--cyan);
+}
+
+.site-title:hover .title-jan,
+.site-title:hover .title-maru {
+    animation: shimmer 0.8s ease-in-out;
+}
+
+.site-title:hover .title-maru {
+    animation-delay: 0.1s;
+}
+
+@keyframes shimmer {
+    0% { opacity: 1; }
+    25% { opacity: 0.4; text-shadow: 0 0 8px var(--green); }
+    50% { opacity: 1; text-shadow: 0 0 12px var(--cyan); }
+    75% { opacity: 0.7; text-shadow: 0 0 6px var(--green); }
+    100% { opacity: 1; text-shadow: none; }
 }
 
 header nav {
@@ -461,8 +482,16 @@ footer {
 
 .repo-card h4 {
     margin: 0 0 0.4rem 0;
-    color: var(--cyan);
     font-family: var(--mono);
+}
+
+.repo-card h4 a {
+    color: var(--cyan);
+    text-decoration: none;
+}
+
+.repo-card h4 a:hover {
+    color: var(--yellow);
 }
 
 .repo-card p {
