@@ -55,8 +55,12 @@ Inspired by the Turbo Pascal DOS environment — dark background, monospace font
 ```
 Home (/)
 ├── Post list (paginated, 5 per page)
-├── LLM (/categories/llm/)
-│   └── Filtered post list for LLM category
+├── AI (/categories/ai/)
+│   └── Filtered post list for AI category
+├── Philosophy (/categories/philosophy/)
+│   └── Filtered post list for Philosophy category
+├── Odds (/categories/odds/)
+│   └── Filtered post list for Odds category
 └── About (/about/)
     └── Bio, interests, selected projects
 ```
