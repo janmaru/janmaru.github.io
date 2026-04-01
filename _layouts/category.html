@@ -5,10 +5,61 @@ layout: default
 <p class="meta">{{ page.category_description }}</p>
 
 {% assign sorted_posts = site.posts | where: "category", page.category_name | sort: 'date' | reverse %}
+{% assign total_posts = sorted_posts | size %}
+{% assign per_page = 5 %}
+
+<div id="category-posts">
 {% for post in sorted_posts %}
-<div class="post-card">
+<div class="post-card" data-index="{{ forloop.index }}">
     <div class="meta">{{ post.date | date: "%B %-d, %Y" }}</div>
     <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
     <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
 </div>
 {% endfor %}
+</div>
+
+<nav class="pagination" id="category-pagination"></nav>
+
+<script>
+(function() {
+    var perPage = {{ per_page }};
+    var cards = document.querySelectorAll('#category-posts .post-card');
+    var total = cards.length;
+    var totalPages = Math.ceil(total / perPage);
+    if (totalPages <= 1) return;
+
+    var currentPage = 1;
+
+    function showPage(page) {
+        currentPage = page;
+        var start = (page - 1) * perPage;
+        var end = start + perPage;
+        cards.forEach(function(card, i) {
+            card.style.display = (i >= start && i < end) ? '' : 'none';
+        });
+        renderNav();
+        window.scrollTo(0, 0);
+    }
+
+    function renderNav() {
+        var nav = document.getElementById('category-pagination');
+        var html = '';
+        if (currentPage > 1) {
+            html += '<a href="#" data-page="' + (currentPage - 1) + '">&larr; Newer</a>';
+        }
+        html += '<span class="page-number">Page ' + currentPage + ' of ' + totalPages + '</span>';
+        if (currentPage < totalPages) {
+            html += '<a href="#" data-page="' + (currentPage + 1) + '">Older &rarr;</a>';
+        }
+        nav.innerHTML = html;
+        nav.querySelectorAll('a').forEach(function(a) {
+            a.addEventListener('click', function(e) {
+                e.preventDefault();
+                showPage(parseInt(this.getAttribute('data-page')));
+            });
+        });
+    }
+
+    showPage(1);
+})();
+</script>
