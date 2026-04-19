@@ -7,6 +7,8 @@ tags: [Aesthetics, Baudrillard, Warhol, Banksy, Consumerism]
 excerpt: "Haring said art is for everybody. Baudrillard suggests the opposite: true art is uncomfortable, ephemeral, and for no one."
 ---
 
+![Andy Warhol, Napoli](/assets/images/andy_warhol_napoli.jpg)
+
 "Art is for everybody" is a core idea in Keith Haring's work and life. But at the very core, art is for no one. The contrast with the solitude of the parking, museums, art galleries, and concentration camps is absolute.
 
 ### Transaesthetics
