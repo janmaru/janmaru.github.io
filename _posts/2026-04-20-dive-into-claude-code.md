@@ -7,7 +7,7 @@ tags: [AgenticAI, ClaudeCode, Anthropic, AIArchitecture, MCP, ModelAlignment, Sa
 excerpt: "Users approve 93% of permission prompts. Anthropic's answer is not more warnings, but sandboxing, classifiers, and a deterministic infrastructure around a simple while-loop."
 ---
 
-![Dive into Claude Code](/assets/images/dive-into-claude-code.jpg)
+![Dive into Claude Code](/assets/images/claude_paper.jpg)
 
 A recent technical report, [*Dive into Claude Code: The Design Space of Today's and Future AI Agent Systems*](https://arxiv.org/abs/2604.14228), dissects the TypeScript source of Claude Code and compares it with OpenClaw. The interesting part is not the loop at the center — which is almost trivial — but the infrastructure built around it to make an agent usable without becoming reckless.
 
