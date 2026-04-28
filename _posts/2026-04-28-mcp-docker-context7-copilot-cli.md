@@ -9,8 +9,6 @@ excerpt: "Wiring Context7 MCP into Copilot CLI looked like four config files. It
 
 ![Copilot CLI + MCP architecture](/assets/images/mcp-copilot-architecture.png)
 
-![Copilot CLI wrapper sequence](/assets/images/mcp-copilot-sequence.png)
-
 > Note: the MCP and Docker bits are platform‑agnostic. The shell glue (PATH precedence, profile, AutoRun) is **Windows‑specific**.
 
 I wanted to wire **Context7** (an MCP server with up‑to‑date docs for 1000+ libraries) into **GitHub Copilot CLI**, with the container booting autonomously every time the terminal opens.
@@ -24,6 +22,8 @@ On paper: 4 config files. In reality: 3 noteworthy traps.
 **3) On Windows the System PATH takes precedence over the User PATH.** Dropping the wrapper in `C:\Users\<me>\bin` is not enough: the original nodejs `copilot.cmd` wins. Fix: prepend the user bin to `$env:Path` on every shell startup (PS profile + cmd AutoRun). And here's the final twist: a check "if already present, do nothing" *skips the prepend exactly when it matters* because `bin` already is in User PATH — just in the wrong position. Lesson: strip existing occurrences and prepend *every time*.
 
 The pattern that came out is straightforward: a `copilot.cmd` wrapper that (a) guarantees the container with idempotent create/start/reuse, (b) waits for the TCP port, (c) delegates to the real binary. No race condition with the MCP client.
+
+![Copilot CLI wrapper sequence](/assets/images/mcp-copilot-sequence.png)
 
 Takeaway: **MCP is not magic, it's JSON‑RPC**. Docker gives you isolation and digest pinning. The critical integration point is PATH — `where copilot` is your best friend.
 
